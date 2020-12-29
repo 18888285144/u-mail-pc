@@ -58,7 +58,12 @@ export default new Router({
     {
       path: "/",
       component: () => import("../pages/index/index.vue"),
-      children: [
+      children:[
+        {
+          path:"",
+          component:()=>import("../pages/home/home.vue")
+        },
+        //12.恢复
         ...indexRoutes
       ]
     }
